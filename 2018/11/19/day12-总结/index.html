@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>PEP8代码风格指南 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#迭代器 1.函数调用过程:函数调用过程又叫压栈的过程：每次调用函数，系统都会在内存的栈区间自动开辟一个临时的内存空间，用来保存在函数中声明的局部变量(其中形参是也保存在这个区域中的)，当函数调用结束，这个内存区域会自动销毁(这个内存中存储的数据也会销毁)2.迭代器(iter)1) 什么是迭代器迭代器是python提供的容器型数据类型。 （可变，有序的）– 不关注迭代器和之前的列表、字典、集合、元">
+<meta name="keywords" content="Python,PEP8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PEP8代码风格指南">
+<meta property="og:url" content="http://yoursite.com/2018/11/19/day12-总结/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#迭代器 1.函数调用过程:函数调用过程又叫压栈的过程：每次调用函数，系统都会在内存的栈区间自动开辟一个临时的内存空间，用来保存在函数中声明的局部变量(其中形参是也保存在这个区域中的)，当函数调用结束，这个内存区域会自动销毁(这个内存中存储的数据也会销毁)2.迭代器(iter)1) 什么是迭代器迭代器是python提供的容器型数据类型。 （可变，有序的）– 不关注迭代器和之前的列表、字典、集合、元">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-13T06:30:12.615Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PEP8代码风格指南">
+<meta name="twitter:description" content="#迭代器 1.函数调用过程:函数调用过程又叫压栈的过程：每次调用函数，系统都会在内存的栈区间自动开辟一个临时的内存空间，用来保存在函数中声明的局部变量(其中形参是也保存在这个区域中的)，当函数调用结束，这个内存区域会自动销毁(这个内存中存储的数据也会销毁)2.迭代器(iter)1) 什么是迭代器迭代器是python提供的容器型数据类型。 （可变，有序的）– 不关注迭代器和之前的列表、字典、集合、元">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">个人博客</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day12-总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/19/day12-总结/" class="article-date">
+  <time datetime="2018-11-19T15:58:18.000Z" itemprop="datePublished">2018-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/语言基础/">语言基础</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      PEP8代码风格指南
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#迭代器</p>
+<h2 id="1-函数调用过程"><a href="#1-函数调用过程" class="headerlink" title="1.函数调用过程:"></a>1.函数调用过程:</h2><h3 id="函数调用过程又叫压栈的过程：每次调用函数，系统都会在内存的栈区间自动开辟一个临时的内存空间，"><a href="#函数调用过程又叫压栈的过程：每次调用函数，系统都会在内存的栈区间自动开辟一个临时的内存空间，" class="headerlink" title="函数调用过程又叫压栈的过程：每次调用函数，系统都会在内存的栈区间自动开辟一个临时的内存空间，"></a>函数调用过程又叫压栈的过程：每次调用函数，系统都会在内存的栈区间自动开辟一个临时的内存空间，</h3><h3 id="用来保存在函数中声明的局部变量-其中形参是也保存在这个区域中的-，"><a href="#用来保存在函数中声明的局部变量-其中形参是也保存在这个区域中的-，" class="headerlink" title="用来保存在函数中声明的局部变量(其中形参是也保存在这个区域中的)，"></a>用来保存在函数中声明的局部变量(其中形参是也保存在这个区域中的)，</h3><h3 id="当函数调用结束，这个内存区域会自动销毁-这个内存中存储的数据也会销毁"><a href="#当函数调用结束，这个内存区域会自动销毁-这个内存中存储的数据也会销毁" class="headerlink" title="当函数调用结束，这个内存区域会自动销毁(这个内存中存储的数据也会销毁)"></a>当函数调用结束，这个内存区域会自动销毁(这个内存中存储的数据也会销毁)</h3><h2 id="2-迭代器-iter"><a href="#2-迭代器-iter" class="headerlink" title="2.迭代器(iter)"></a>2.迭代器(iter)</h2><h3 id="1-什么是迭代器"><a href="#1-什么是迭代器" class="headerlink" title="1) 什么是迭代器"></a>1) 什么是迭代器</h3><h3 id="迭代器是python提供的容器型数据类型。-（可变，有序的）–-不关注"><a href="#迭代器是python提供的容器型数据类型。-（可变，有序的）–-不关注" class="headerlink" title="迭代器是python提供的容器型数据类型。 （可变，有序的）– 不关注"></a>迭代器是python提供的容器型数据类型。 （可变，有序的）– 不关注</h3><h3 id="迭代器和之前的列表、字典、集合、元祖等容器不一样，它只能查看元素，而且看一个对于迭代器来说，里面的元素就会少一个"><a href="#迭代器和之前的列表、字典、集合、元祖等容器不一样，它只能查看元素，而且看一个对于迭代器来说，里面的元素就会少一个" class="headerlink" title="迭代器和之前的列表、字典、集合、元祖等容器不一样，它只能查看元素，而且看一个对于迭代器来说，里面的元素就会少一个"></a>迭代器和之前的列表、字典、集合、元祖等容器不一样，它只能查看元素，而且看一个对于迭代器来说，里面的元素就会少一个</h3><h3 id="迭代器的值：a-将其他的数据转换成迭代器-b-生成器"><a href="#迭代器的值：a-将其他的数据转换成迭代器-b-生成器" class="headerlink" title="迭代器的值：a.将其他的数据转换成迭代器    b.生成器"></a>迭代器的值：a.将其他的数据转换成迭代器    b.生成器</h3><h3 id="迭代器的元素-任何类型的数据都可以，可以重复"><a href="#迭代器的元素-任何类型的数据都可以，可以重复" class="headerlink" title="迭代器的元素: 任何类型的数据都可以，可以重复"></a>迭代器的元素: 任何类型的数据都可以，可以重复</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">iter1 = iter(<span class="string">'abc'</span>)</span><br><span class="line">print(iter1)</span><br><span class="line"></span><br><span class="line">iter2 = iter([<span class="number">12</span>, <span class="number">34</span>, <span class="string">'abc'</span>, [<span class="number">1</span>, <span class="number">2</span>], &#123;<span class="string">'a'</span>: <span class="number">10</span>&#125;, (<span class="number">1</span>, <span class="number">2</span>), &#123;<span class="number">1</span>, <span class="number">3</span>&#125;, <span class="keyword">lambda</span> x: x])</span><br><span class="line">print(iter2)</span><br></pre></td></tr></table></figure>
+<h3 id="2-查-获取元素的值"><a href="#2-查-获取元素的值" class="headerlink" title="2) 查 - 获取元素的值"></a>2) 查 - 获取元素的值</h3><h3 id="注意-不管以任何形式获取了迭代器中某个元素的值，这个元素都会从迭代器中消失"><a href="#注意-不管以任何形式获取了迭代器中某个元素的值，这个元素都会从迭代器中消失" class="headerlink" title="注意: 不管以任何形式获取了迭代器中某个元素的值，这个元素都会从迭代器中消失"></a>注意: 不管以任何形式获取了迭代器中某个元素的值，这个元素都会从迭代器中消失</h3><h3 id="a-获取单个元素"><a href="#a-获取单个元素" class="headerlink" title="a.获取单个元素"></a>a.获取单个元素</h3><h3 id="next-迭代器-迭代器-next-返回容器中最上面的元素"><a href="#next-迭代器-迭代器-next-返回容器中最上面的元素" class="headerlink" title="next(迭代器)/ 迭代器.next()    -  返回容器中最上面的元素"></a>next(迭代器)/ 迭代器.<strong>next</strong>()    -  返回容器中最上面的元素</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(next(iter1))</span><br><span class="line">print(next(iter1))</span><br><span class="line">print(next(iter1))</span><br><span class="line"><span class="comment"># print(next(iter1))     #  StopIteration</span></span><br></pre></td></tr></table></figure>
+<p>###b.遍历取出迭代器中的每个元素<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'============='</span>)</span><br><span class="line">iter3 = iter(<span class="string">'abcdef'</span>)</span><br><span class="line">next(iter3)</span><br><span class="line">next(iter3)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> iter3:</span><br><span class="line">    print(item)</span><br><span class="line"></span><br><span class="line">print(<span class="string">'============='</span>)</span><br><span class="line"><span class="comment"># print(next(iter3))   # StopIteration</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="3-什么时候使用迭代器：多个数据中，某个或者某些数据使用过了就不需要再保存了，这种数据就可以使用迭代器来保存。"><a href="#3-什么时候使用迭代器：多个数据中，某个或者某些数据使用过了就不需要再保存了，这种数据就可以使用迭代器来保存。" class="headerlink" title="3) 什么时候使用迭代器：多个数据中，某个或者某些数据使用过了就不需要再保存了，这种数据就可以使用迭代器来保存。"></a>3) 什么时候使用迭代器：多个数据中，某个或者某些数据使用过了就不需要再保存了，这种数据就可以使用迭代器来保存。</h3><p>#生成器</p>
+<h3 id="1-什么是生成器"><a href="#1-什么是生成器" class="headerlink" title="1.什么是生成器"></a>1.什么是生成器</h3><h3 id="生成器就是迭代器，-但是迭代器不一定是生成器"><a href="#生成器就是迭代器，-但是迭代器不一定是生成器" class="headerlink" title="生成器就是迭代器， 但是迭代器不一定是生成器"></a>生成器就是迭代器， 但是迭代器不一定是生成器</h3><h3 id="1）怎么创建生成器"><a href="#1）怎么创建生成器" class="headerlink" title="1）怎么创建生成器"></a>1）怎么创建生成器</h3><h3 id="如果函数中有yield关键字，那么这个函数就不再是一个普通的函数。"><a href="#如果函数中有yield关键字，那么这个函数就不再是一个普通的函数。" class="headerlink" title="如果函数中有yield关键字，那么这个函数就不再是一个普通的函数。"></a>如果函数中有yield关键字，那么这个函数就不再是一个普通的函数。</h3><h3 id="调用函数不再是执行函数体，获取返回值。而是创建这个函数对应的生成器对象"><a href="#调用函数不再是执行函数体，获取返回值。而是创建这个函数对应的生成器对象" class="headerlink" title="调用函数不再是执行函数体，获取返回值。而是创建这个函数对应的生成器对象"></a>调用函数不再是执行函数体，获取返回值。而是创建这个函数对应的生成器对象</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nums</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'============'</span>)</span><br><span class="line">    print(<span class="number">100</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="literal">False</span>:</span><br><span class="line">        <span class="keyword">yield</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">100</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gen1 = nums()      <span class="comment"># 函数调用表达式nums()才是生成器</span></span><br></pre></td></tr></table></figure>
+<h3 id="2）生成器怎么产生数据"><a href="#2）生成器怎么产生数据" class="headerlink" title="2）生成器怎么产生数据"></a>2）生成器怎么产生数据</h3><h3 id="一个生成器能够产生多少个数据，就看执行完生成器对应的函数体会遇到几次yield关键字"><a href="#一个生成器能够产生多少个数据，就看执行完生成器对应的函数体会遇到几次yield关键字" class="headerlink" title="一个生成器能够产生多少个数据，就看执行完生成器对应的函数体会遇到几次yield关键字"></a>一个生成器能够产生多少个数据，就看执行完生成器对应的函数体会遇到几次yield关键字</h3><h3 id="生成器是在获取数据的时候才会产生数据，执行生成器对应的函数的函数体，直到遇到yield为止，"><a href="#生成器是在获取数据的时候才会产生数据，执行生成器对应的函数的函数体，直到遇到yield为止，" class="headerlink" title="生成器是在获取数据的时候才会产生数据，执行生成器对应的函数的函数体，直到遇到yield为止，"></a>生成器是在获取数据的时候才会产生数据，执行生成器对应的函数的函数体，直到遇到yield为止，</h3><h3 id="将yield后面的数据作为生成器的元素返回，并且会记录这次产生数据函数体结束的位置，下次再产生"><a href="#将yield后面的数据作为生成器的元素返回，并且会记录这次产生数据函数体结束的位置，下次再产生" class="headerlink" title="将yield后面的数据作为生成器的元素返回，并且会记录这次产生数据函数体结束的位置，下次再产生"></a>将yield后面的数据作为生成器的元素返回，并且会记录这次产生数据函数体结束的位置，下次再产生</h3><h3 id="数据的时候，会接着上次结束的位置接着往后执行…如果从执行开始到函数结束，没有遇到yield，那么就不会产生数据。"><a href="#数据的时候，会接着上次结束的位置接着往后执行…如果从执行开始到函数结束，没有遇到yield，那么就不会产生数据。" class="headerlink" title="数据的时候，会接着上次结束的位置接着往后执行…如果从执行开始到函数结束，没有遇到yield，那么就不会产生数据。"></a>数据的时候，会接着上次结束的位置接着往后执行…如果从执行开始到函数结束，没有遇到yield，那么就不会产生数据。</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nums</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'++++++'</span>)</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">'abc'</span></span><br><span class="line">    print(<span class="string">'-------'</span>)</span><br><span class="line">    <span class="keyword">yield</span> <span class="number">100</span></span><br><span class="line">    print(<span class="string">'********'</span>)</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">        <span class="keyword">yield</span> x</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个生成器gen2</span></span><br><span class="line">gen2 = nums()</span><br><span class="line">print(<span class="string">'取第一个值'</span>)</span><br><span class="line">print(next(gen2))</span><br><span class="line">print(<span class="string">'取第二个值'</span>)</span><br><span class="line">print(next(gen2))</span><br><span class="line">print(<span class="string">'取第三个值'</span>)</span><br><span class="line">print(next(gen2))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nums2</span><span class="params">()</span>:</span></span><br><span class="line">    index = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="keyword">yield</span> index</span><br><span class="line">        index += <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gen3 = nums2()</span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    print(next(gen3))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(next(gen3))</span><br><span class="line">print(next(gen3))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 练习:  写一个生产器，能够产生'stuXXXX'的学号， stu0000  ~ stu9999</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">stu_num_creater</span><span class="params">(count, width=<span class="number">0</span>)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> range(count):</span><br><span class="line">        <span class="keyword">if</span> width == <span class="number">0</span>:</span><br><span class="line">            width = len(str(count))</span><br><span class="line">        num_str = <span class="string">'stu'</span> + str(num).zfill(width)</span><br><span class="line">        <span class="keyword">yield</span> num_str</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">creater = stu_num_creater(<span class="number">100</span>, <span class="number">4</span>)</span><br><span class="line">print(next(creater))</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> creater:</span><br><span class="line">    print(num)</span><br></pre></td></tr></table></figure>
+<p>#生成式</p>
+<h2 id="1-生成式"><a href="#1-生成式" class="headerlink" title="1.生成式"></a>1.生成式</h2><h3 id="生产式是生成器的另外一种写法（简写）"><a href="#生产式是生成器的另外一种写法（简写）" class="headerlink" title="生产式是生成器的另外一种写法（简写）"></a>生产式是生成器的另外一种写法（简写）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">a.语法1：</span></span><br><span class="line"><span class="string">生成器变量 = (表达式 for 变量 in 序列)   --  结果是生成器</span></span><br><span class="line"><span class="string">列表变量 = [表达式 for 变量 in 序列]     --  结果是列表 </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">b.说明: 表达式 - 可以是值、变量、运算表达式、函数调用表达式等，只要不是赋值语句都可以</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">c.展开  </span></span><br><span class="line"><span class="string">def 函数名():</span></span><br><span class="line"><span class="string">    for 变量 in 序列:</span></span><br><span class="line"><span class="string">        yield 表达式</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">gen1 = (x*<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>))</span><br><span class="line">print(gen1)</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> gen1:</span><br><span class="line">    print(num)</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">a.语法2：</span></span><br><span class="line"><span class="string">生成器变量 = (表达式 for 变量 in 序列 if 条件语句)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">b.展开</span></span><br><span class="line"><span class="string">def 函数名():</span></span><br><span class="line"><span class="string">    for 变量 in 序列:</span></span><br><span class="line"><span class="string">        if 条件语句:</span></span><br><span class="line"><span class="string">            yield 表达式</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">gen2 = (x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>) <span class="keyword">if</span> x % <span class="number">2</span>)</span><br><span class="line"><span class="comment"># 5个  1，3，5，7，9</span></span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> gen2:</span><br><span class="line">    print(num)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gen2 = ((x, x*<span class="number">2</span>) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>) <span class="keyword">if</span> x % <span class="number">2</span>)</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> gen2:</span><br><span class="line">    print(num)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gen2 = ((x, x*<span class="number">2</span>) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>) <span class="keyword">if</span> x % <span class="number">2</span>)</span><br><span class="line">list2 = list(gen2)</span><br><span class="line">print(list2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># next(gen2)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gen2 = [<span class="string">'num%d'</span> % x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>) <span class="keyword">if</span> x % <span class="number">2</span>]</span><br><span class="line">print(gen2)</span><br></pre></td></tr></table></figure>
+<h3 id="python中一个py文件就是一个模块"><a href="#python中一个py文件就是一个模块" class="headerlink" title="python中一个py文件就是一个模块"></a>python中一个py文件就是一个模块</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">从封装的角度看： </span></span><br><span class="line"><span class="string">函数是对功能的封装  </span></span><br><span class="line"><span class="string">模块可以通过多个函数对不同的功能进行封装，还可以通过全局变量对数据进行封装</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+<h3 id="0-模块的分类-系统模块-内置模块-、第三方库-别人写的-、自定义模块"><a href="#0-模块的分类-系统模块-内置模块-、第三方库-别人写的-、自定义模块" class="headerlink" title="0.模块的分类: 系统模块(内置模块)、第三方库(别人写的)、自定义模块"></a>0.模块的分类: 系统模块(内置模块)、第三方库(别人写的)、自定义模块</h3><h3 id="1-模块的导入"><a href="#1-模块的导入" class="headerlink" title="1.模块的导入"></a>1.模块的导入</h3><h3 id="a-import-模块名-import-模块名-as-新的模块名-—-可以通过’模块名-’的方式去使用这个模块中所有的全局变量"><a href="#a-import-模块名-import-模块名-as-新的模块名-—-可以通过’模块名-’的方式去使用这个模块中所有的全局变量" class="headerlink" title="a.import 模块名  / import 模块名 as 新的模块名   —  可以通过’模块名.’的方式去使用这个模块中所有的全局变量"></a>a.import 模块名  / import 模块名 as 新的模块名   —  可以通过’模块名.’的方式去使用这个模块中所有的全局变量</h3><h3 id="b-from-模块名-import-全局变量1-as-新名1-全局变量2-as-新名2-…-—-带入指定模块中指定的全局变量，导入后直接使用全局变量"><a href="#b-from-模块名-import-全局变量1-as-新名1-全局变量2-as-新名2-…-—-带入指定模块中指定的全局变量，导入后直接使用全局变量" class="headerlink" title="b.from 模块名 import 全局变量1 as 新名1,全局变量2 as 新名2,…   —  带入指定模块中指定的全局变量，导入后直接使用全局变量"></a>b.from 模块名 import 全局变量1 as 新名1,全局变量2 as 新名2,…   —  带入指定模块中指定的全局变量，导入后直接使用全局变量</h3><h3 id="注意-重命名后，原名不能使用"><a href="#注意-重命名后，原名不能使用" class="headerlink" title="注意: 重命名后，原名不能使用"></a>注意: 重命名后，原名不能使用</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ===========导入方式1===========</span></span><br><span class="line"><span class="comment"># import keyword</span></span><br><span class="line"><span class="comment"># import random</span></span><br><span class="line"><span class="comment"># import math</span></span><br><span class="line"><span class="comment"># import test</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># print(test.test1_a * 3)</span></span><br><span class="line"><span class="comment"># test.test1_a = 200</span></span><br><span class="line"><span class="comment"># print(test.test1_a)</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># test.test1_func1()</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ============导入方式2==========</span></span><br><span class="line"><span class="comment"># from random import randint</span></span><br><span class="line"><span class="comment"># print(randint(10, 30))</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># from test import test1_func1, test1_a</span></span><br><span class="line"><span class="comment"># test1_func1()</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># print(test1_a)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ============导入模块并重命名==========</span></span><br><span class="line"><span class="comment"># import test as TS</span></span><br><span class="line"><span class="comment"># print(TS.test1_a)</span></span><br><span class="line"><span class="comment"># TS.test1_func1()</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># b = 'python'</span></span><br><span class="line"><span class="comment"># from test import b as t_b, test1_a as t_a</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># print(b, t_b, t_a)</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-导入模块的原理：当代码执行到import或者from-import的时候，会自动将对应的模块中的代码全部执行一遍"><a href="#3-导入模块的原理：当代码执行到import或者from-import的时候，会自动将对应的模块中的代码全部执行一遍" class="headerlink" title="3.导入模块的原理：当代码执行到import或者from - import的时候，会自动将对应的模块中的代码全部执行一遍"></a>3.导入模块的原理：当代码执行到import或者from - import的时候，会自动将对应的模块中的代码全部执行一遍</h3><h3 id="同一个模块导入多次不会执行多次-放心的导入"><a href="#同一个模块导入多次不会执行多次-放心的导入" class="headerlink" title="同一个模块导入多次不会执行多次(放心的导入!)"></a>同一个模块导入多次不会执行多次(放心的导入!)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print('++++++++++++++')</span></span><br><span class="line"><span class="comment"># import test</span></span><br><span class="line"><span class="comment"># import test</span></span><br><span class="line"><span class="comment"># from test import test1_a</span></span><br><span class="line"><span class="comment"># import test2</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># print(test1_a, test.test1_func1())</span></span><br><span class="line"><span class="comment"># print('++++++++++++++')</span></span><br><span class="line">print(<span class="string">'mudule:'</span>, __name__)</span><br><span class="line"><span class="keyword">from</span> test2 <span class="keyword">import</span> yt_sum</span><br><span class="line">print(yt_sum(<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> PIL</span><br><span class="line"><span class="keyword">import</span> requests</span><br></pre></td></tr></table></figure>
+<h3 id="4-阻止导入：-将需要阻止被别的模块导入的代码放到以下if语句中"><a href="#4-阻止导入：-将需要阻止被别的模块导入的代码放到以下if语句中" class="headerlink" title="4.阻止导入： 将需要阻止被别的模块导入的代码放到以下if语句中"></a>4.阻止导入： 将需要阻止被别的模块导入的代码放到以下if语句中</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">if __name__ == '__main__':</span></span><br><span class="line"><span class="string">    需要阻止导入的代码段</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">原理: 每个模块都有一个属于自己的__name__属性，用来保存当前模块的模块名。默认情况下__name__的值就模块对应的py文件</span></span><br><span class="line"><span class="string">     的文件名。当我们直接运行某个模块的时候，对应的模块的__name__会自动变成'__main__',其他模块是默认值。</span></span><br></pre></td></tr></table></figure>
+<p>#异常</p>
+<h3 id="1-异常-：-程序错误、程序崩溃。程序中某条语句出现异常，那么从这条语句开始，后面的代码不会执行，程序直接结束"><a href="#1-异常-：-程序错误、程序崩溃。程序中某条语句出现异常，那么从这条语句开始，后面的代码不会执行，程序直接结束" class="headerlink" title="1.异常 ： 程序错误、程序崩溃。程序中某条语句出现异常，那么从这条语句开始，后面的代码不会执行，程序直接结束"></a>1.异常 ： 程序错误、程序崩溃。程序中某条语句出现异常，那么从这条语句开始，后面的代码不会执行，程序直接结束</h3><h3 id="2-异常捕获：程序出现异常的时候，程序不崩溃"><a href="#2-异常捕获：程序出现异常的时候，程序不崩溃" class="headerlink" title="2.异常捕获：程序出现异常的时候，程序不崩溃"></a>2.异常捕获：程序出现异常的时候，程序不崩溃</h3><h3 id="1）方式一：-捕获所有类型的异常"><a href="#1）方式一：-捕获所有类型的异常" class="headerlink" title="1）方式一： 捕获所有类型的异常"></a>1）方式一： 捕获所有类型的异常</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">a.语法</span></span><br><span class="line"><span class="string">try:</span></span><br><span class="line"><span class="string">    代码段1</span></span><br><span class="line"><span class="string">except:</span></span><br><span class="line"><span class="string">    代码段2</span></span><br><span class="line"><span class="string">finally:</span></span><br><span class="line"><span class="string">    代码段N</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">其他语句</span></span><br></pre></td></tr></table></figure>
+<p>###b.说明：先执行代码段1，如果代码段1不出现异常，直接执行后面的其他语句；</p>
+<p>###如果出现异常不崩溃直接执行代码段2，然后再接着其他语句<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">list1 = [1, 2, 3]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">try:</span></span><br><span class="line"><span class="string">    print(list1[10])</span></span><br><span class="line"><span class="string">    print(&#123;'a': 10&#125;['b'])</span></span><br><span class="line"><span class="string">    print('~~~~')</span></span><br><span class="line"><span class="string">except:</span></span><br><span class="line"><span class="string">    print('出现异常')</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">print('======================')</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 方式2：捕获指定的一个或者多个异常，做相同的处理</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    代码段<span class="number">1</span></span><br><span class="line"><span class="keyword">except</span> 异常类型:</span><br><span class="line">    代码段<span class="number">2</span></span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    代码段N</span><br><span class="line">    </span><br><span class="line">其他语句    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    代码段<span class="number">1</span></span><br><span class="line"><span class="keyword">except</span> (异常类型<span class="number">1</span>,异常类型<span class="number">2</span>,...):</span><br><span class="line">    代码段<span class="number">2</span></span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    代码段N</span><br><span class="line"></span><br><span class="line">其他语句</span><br></pre></td></tr></table></figure></p>
+<p>###先执行代码段1，如果代码1没有出现异常，直接执行后面的其他语句；</p>
+<p>###如果代码段1出现异常，如果这个异常的类型和需要捕获的异常类型一致，程序不崩溃，直接###执行代码段2，然后再执行其他语句；</p>
+<p>###如果代码段出现异常，异常类型和需要捕获的异常类型不一致，程序直接崩溃</p>
+<p>###注意：异常类型要求必须是直接或者间接继承Exception类的子类<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">print('==============方式二===============')</span></span><br><span class="line"><span class="string">try:</span></span><br><span class="line"><span class="string">    # print(&#123;'a': 10&#125;['n'])</span></span><br><span class="line"><span class="string">    # print([1, 2, 3][10])</span></span><br><span class="line"><span class="string">    print('======')</span></span><br><span class="line"><span class="string">    print(int('abc'))</span></span><br><span class="line"><span class="string">except (KeyError, IndexError):</span></span><br><span class="line"><span class="string">    print('出现异常!')</span></span><br><span class="line"><span class="string">finally:</span></span><br><span class="line"><span class="string">    print('写遗书！')</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 方式3：捕获不同类型的异常，并且可以对不同的异常做不同的处理</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    代码段<span class="number">1</span></span><br><span class="line"><span class="keyword">except</span> 异常类型<span class="number">1</span>:</span><br><span class="line">    代码段<span class="number">2</span></span><br><span class="line"><span class="keyword">except</span> 异常类型<span class="number">2</span>:</span><br><span class="line">    代码段<span class="number">3</span></span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    代码段N</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'==============方式3==============='</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    print(&#123;<span class="string">'a'</span>: <span class="number">10</span>&#125;[<span class="string">'b'</span>])</span><br><span class="line">    print([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>][<span class="number">10</span>])</span><br><span class="line"><span class="keyword">except</span> IndexError:</span><br><span class="line">    print(<span class="string">'下标越界'</span>)</span><br><span class="line"><span class="keyword">except</span> KeyError:</span><br><span class="line">    print(<span class="string">'key不存在'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="3-finally后面的代码段，不管try中的代码发生了什么，都会执行"><a href="#3-finally后面的代码段，不管try中的代码发生了什么，都会执行" class="headerlink" title="3.finally后面的代码段，不管try中的代码发生了什么，都会执行"></a>3.finally后面的代码段，不管try中的代码发生了什么，都会执行</h3><h3 id="作业-输入年龄并且将年龄值转换成整数，如果输入错误程序不崩溃，让其重新输入，直到输入无误为止…"><a href="#作业-输入年龄并且将年龄值转换成整数，如果输入错误程序不崩溃，让其重新输入，直到输入无误为止…" class="headerlink" title="作业:  输入年龄并且将年龄值转换成整数，如果输入错误程序不崩溃，让其重新输入，直到输入无误为止…"></a>作业:  输入年龄并且将年龄值转换成整数，如果输入错误程序不崩溃，让其重新输入，直到输入无误为止…</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/19/day12-总结/" data-id="cjuhsg2fz000cj0nnwmhbltnp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PEP8/">PEP8</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/11/19/day06-总结/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          PEP8代码风格指南
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <!-- Featured Tags -->
+
+  
+    <!-- Short About -->
+<section class="visible-md visible-lg">
+    <h5><a href="/about/">ABOUT ME</a></h5>
+    <div class="short-about">
+
+        
+
+        
+
+        <!-- SNS Link -->
+        <ul class="list-inline">
+            
+            
+            
+
+            
+
+            
+
+            
+            
+            
+            
+        </ul>
+    </div>
+</section>
+
+  
+    
+  <h5>RECENT POSTS
+  <div class="widget">
+    <ul>
+      
+        <li>
+          <a href="/2019/04/13/hello-world/">Hello World</a>
+        </li>
+      
+        <li>
+          <a href="/2018/11/19/day09-总结/">PEP8代码风格指南</a>
+        </li>
+      
+        <li>
+          <a href="/2018/11/19/day06-总结/">PEP8代码风格指南</a>
+        </li>
+      
+        <li>
+          <a href="/2018/11/19/day12-总结/">PEP8代码风格指南</a>
+        </li>
+      
+    </ul>
+  </div>
+</h5>
+  
+    <!-- Friends Blog -->
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
